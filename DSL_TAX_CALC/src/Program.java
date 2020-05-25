@@ -11,4 +11,36 @@ public class Program {
 
     public String taskToCalculate;
 
+    public void calcGrossSalary()
+    {
+        float finalSalary = 0;
+        if(salaryType.contains("netSalary")){
+            if(itField)
+            {
+                finalSalary = this.salary;
+            }
+            else
+            {
+                finalSalary = this.salary + this.salary * contribPensionFund / 100;
+                if(medInsEmployer > 0)
+                {
+                    finalSalary += (this.salary * medInsEmployer) / 100;
+                }
+                else if(medInsEmployee > 0)
+                {
+                    finalSalary += (this.salary * medInsEmployee) / 100;
+                }
+
+                if(syndicateContrib)
+                {
+                    finalSalary += this.salary / 100;
+                }
+            }
+            System.out.println(finalSalary);
+        }
+        else
+        {
+            System.out.println("Introduce Net Salary");
+        }
+    }
 }

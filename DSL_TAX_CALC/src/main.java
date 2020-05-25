@@ -23,10 +23,10 @@ public class main {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         DSLParser parser = new DSLParser(tokens);
 
-        System.out.println("Bred");
+        System.out.println("");
         Program program = new Program();
         parser.addParseListener(new MyDSLBaseListener(program));
         parser.program();
-
+        program.calcGrossSalary();
     }
 }

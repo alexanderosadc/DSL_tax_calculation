@@ -4,11 +4,11 @@ name -> Xy Yx
     servN 1{
       socialFund -> privateSector
        netSalary -> 1500 eur
-       contribPensionFund -> 30%
-       medInsEmployer -> 20%
-       medInsEmployee -> 8%
-      itField -> yes
-      syndicateContrib -> false
+       contribPensionFund -> 6%
+       medInsEmployer -> 4.5%
+       medInsEmployee -> 4.5%
+       itField -> no
+       syndicateContrib -> false
      }
     }
    calcTaxes

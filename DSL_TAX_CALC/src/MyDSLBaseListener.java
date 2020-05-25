@@ -6,7 +6,6 @@ public class MyDSLBaseListener extends DSLBaseListener{
 
     public MyDSLBaseListener(Program program)
     {
-        System.out.println("AHTUNG ENTER NAZIS");
         this.program = program;
     }
 
@@ -111,7 +110,6 @@ public class MyDSLBaseListener extends DSLBaseListener{
                 program.medInsEmployee = Float.parseFloat(m.group());
             }
         }
-        System.out.println(program.medInsEmployee);
     }
 
     @Override public void exitOptional_taxes(DSLParser.Optional_taxesContext ctx) {
