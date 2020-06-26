@@ -41,7 +41,8 @@ string
    ;
 
 number
-   : NUMBER
+   : INT
+   | FLOAT
    ;
 
 first_category
@@ -85,7 +86,7 @@ salary
    ;
 
 calc_salary
-   :('calcGrossSalary'|'calcNetSalary'|'calcTaxes')+
+   :('calcGrossSalary'|'calcNetSalary'|'calcTotalSalary'|'calcTaxes')+
    ;
 
 currency
@@ -101,8 +102,13 @@ booln
   |'false'
   ;
 
-NUMBER
+INT
    : [0-9] +
+   ;
+
+
+FLOAT
+   :INT'.'INT
    ;
 
 STRING
@@ -112,3 +118,4 @@ STRING
 WS
    : [ \r\n\t] -> skip
    ;
+
